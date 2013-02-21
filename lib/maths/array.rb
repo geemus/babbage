@@ -24,7 +24,7 @@ module Maths
         sorted_array[index.to_i]
       else
         average(
-          sorted_array[index.floor, index.ceil]
+          sorted_array[index.floor, 2]
         )
       end
     end
@@ -65,6 +65,9 @@ if __FILE__ == $0
   array = 0.upto(10).to_a
   p "percentile(#{array.inspect}, 90): #{Maths::Array.percentile(array, 90)}"
   p "percentile(#{array.inspect}, 95): #{Maths::Array.percentile(array, 95)}"
+
+  array = 1.upto(10).to_a
+  p "percentile(#{array.inspect}, 90): #{Maths::Array.percentile(array, 90)}"
 
   array = [2, 4, 4, 4, 5, 5, 7, 9]
   p "standard_deviation(#{array.inspect}): #{Maths::Array.standard_deviation(array)}"
