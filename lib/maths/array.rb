@@ -46,8 +46,7 @@ module Maths
     def self.standard_deviation(array)
       avg = average(array)
       root_mean_square_deviation(array) do |value|
-        diff = value - avg
-        diff * diff
+        (value - avg) ** 2
       end
     end
 
