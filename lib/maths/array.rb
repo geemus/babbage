@@ -2,10 +2,12 @@ module Maths
 
   module Array
 
-    # percentile
-
     def self.average(array)
       sum(array).to_f / array.length
+    end
+
+    def self.maximum(array)
+      array.max
     end
 
     def self.mean(array)
@@ -14,6 +16,10 @@ module Maths
 
     def self.median(array)
       percentile(array, 50)
+    end
+
+    def self.minimum(array)
+      array.min
     end
 
     def self.percentile(array, target)
@@ -60,7 +66,9 @@ if __FILE__ == $0
   p "median(#{array.inspect}): #{Maths::Array.median(array)}"
 
   array = 1.upto(5).to_a
+  p "maximum(#{array.inspect}: #{Maths::Array.maximum(array)}"
   p "median(#{array.inspect}): #{Maths::Array.median(array)}"
+  p "minimum(#{array.inspect}: #{Maths::Array.minimum(array)}"
 
   array = 0.upto(10).to_a
   p "percentile(#{array.inspect}, 90): #{Maths::Array.percentile(array, 90)}"
