@@ -5,7 +5,7 @@ module Maths
     # percentile
 
     def self.average(array)
-      sum(array) / array.length
+      sum(array).to_f / array.length
     end
 
     def self.mean(array)
@@ -13,11 +13,19 @@ module Maths
     end
 
     def self.median(array)
-      index = (array.length / 2.0).floor
-      if array.length % 2 == 1
-        array[index]
+      percentile(array, 50)
+    end
+
+    def self.percentile(array, target)
+      target = target.to_f / 100.0
+      index = (array.length - 1) * target
+      sorted_array = array.sort
+      if index == index.to_i
+        sorted_array[index.to_i]
       else
-        average(array[index, index + 1])
+        average(
+          sorted_array[index.floor, index.ceil]
+        )
       end
     end
 
@@ -53,6 +61,10 @@ if __FILE__ == $0
 
   array = 1.upto(5).to_a
   p "median(#{array.inspect}): #{Maths::Array.median(array)}"
+
+  array = 0.upto(10).to_a
+  p "percentile(#{array.inspect}, 90): #{Maths::Array.percentile(array, 90)}"
+  p "percentile(#{array.inspect}, 95): #{Maths::Array.percentile(array, 95)}"
 
   array = [2, 4, 4, 4, 5, 5, 7, 9]
   p "standard_deviation(#{array.inspect}): #{Maths::Array.standard_deviation(array)}"
