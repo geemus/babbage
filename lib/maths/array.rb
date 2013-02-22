@@ -54,7 +54,12 @@ module Maths
       array.inject(0) {|sum,value| sum + value}
     end
 
-    # variance
+    def self.variance(array)
+      avg = average(array)
+      average(
+        array.map {|value| (value - avg) ** 2 }
+      )
+    end
 
   end
 end
@@ -81,4 +86,7 @@ if __FILE__ == $0
 
   array = 0.upto(5).to_a
   p "sum(#{array.inspect}): #{Maths::Array.sum(array)}"
+
+  array = 1.upto(6).to_a
+  p "variance(#{array.inspect}): #{Maths::Array.variance(array)}"
 end
