@@ -64,29 +64,3 @@ module Maths
   end
 end
 
-if __FILE__ == $0
-  array = 0.upto(5).to_a
-  p "average(#{array.inspect}): #{Maths::Array.average(array)}"
-  p "median(#{array.inspect}): #{Maths::Array.median(array)}"
-
-  array = 1.upto(5).to_a
-  p "maximum(#{array.inspect}: #{Maths::Array.maximum(array)}"
-  p "median(#{array.inspect}): #{Maths::Array.median(array)}"
-  p "minimum(#{array.inspect}: #{Maths::Array.minimum(array)}"
-
-  array = 0.upto(10).to_a
-  p "percentile(#{array.inspect}, 90): #{Maths::Array.percentile(array, 90)}"
-  p "percentile(#{array.inspect}, 95): #{Maths::Array.percentile(array, 95)}"
-
-  array = 1.upto(10).to_a
-  p "percentile(#{array.inspect}, 90): #{Maths::Array.percentile(array, 90)}"
-
-  array = [2, 4, 4, 4, 5, 5, 7, 9]
-  p "standard_deviation(#{array.inspect}): #{Maths::Array.standard_deviation(array)}"
-
-  array = 0.upto(5).to_a
-  p "sum(#{array.inspect}): #{Maths::Array.sum(array)}"
-
-  array = 1.upto(6).to_a
-  p "variance(#{array.inspect}): #{Maths::Array.variance(array)}"
-end
