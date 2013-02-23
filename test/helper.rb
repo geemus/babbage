@@ -1,3 +1,3 @@
 require 'minitest/autorun'
 
-require_relative '../lib/maths'
+require_relative '../lib/babbage'

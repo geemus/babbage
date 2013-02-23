@@ -1,12 +1,12 @@
-# Maths
+# Babbage
 
-Ruby maths. Supplements to/for standard library math.
+Ruby mathematics. Supplements to/for standard library math.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'maths'
+    gem 'babbage'
 
 And then execute:
 
@@ -14,25 +14,25 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install maths
+    $ gem install babbage
 
 ## Usage
 
 ### Array Methods
 
-* `Maths::Array.average([1, 2, 3, 4, 5])              # => 3`
-* `Maths::Array.maximum([1, 2, 3, 4, 5])              # => 5`
-* `Maths::Array.median([1, 2, 3, 4, 5])               # => 3`
-* `Maths::Array.minimum([1, 2, 3, 4, 5])              # => 1`
-* `Maths::Array.percentile([1, 2, 3, 4, 5], 80)       # => 4.5`
-* `Maths::Array.standard_deviation([1, 2, 3, 4, 5])   # => 1.4142135623730951`
-* `Maths::Array.sum([1, 2, 3, 4, 5])                  # => 15`
-* `Maths::Array.variance([1, 2, 3, 4, 5])             # => 2.0`
+* `Babbage::Array.average([1, 2, 3, 4, 5])            # => 3`
+* `Babbage::Array.maximum([1, 2, 3, 4, 5])            # => 5`
+* `Babbage::Array.median([1, 2, 3, 4, 5])             # => 3`
+* `Babbage::Array.minimum([1, 2, 3, 4, 5])            # => 1`
+* `Babbage::Array.percentile([1, 2, 3, 4, 5], 80)     # => 4.5`
+* `Babbage::Array.standard_deviation([1, 2, 3, 4, 5]) # => 1.4142135623730951`
+* `Babbage::Array.sum([1, 2, 3, 4, 5])                # => 15`
+* `Babbage::Array.variance([1, 2, 3, 4, 5])           # => 2.0`
 
 ### Misc Methods
 
-* `Maths.binomial_coefficient(5, 2) # => 10.0`
-* `Maths.factorial(4)               # => 24`
+* `Babbage.binomial_coefficient(5, 2) # => 10.0`
+* `Babbage.factorial(4)               # => 24`
 
 ## Contributing
 

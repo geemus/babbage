@@ -1,7 +1,7 @@
-require "maths/array"
-require "maths/version"
+require "babbage/array"
+require "babbage/version"
 
-module Maths
+module Babbage
 
   def self.binomial_coefficient(number, choices)
     factorial(number).to_f / (factorial(choices).to_f * factorial(number - choices).to_f)

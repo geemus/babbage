@@ -1,4 +1,4 @@
-module Maths
+module Babbage
 
   module Array
 
