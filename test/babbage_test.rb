@@ -3,6 +3,7 @@ require_relative 'helper'
 class TestBabbage < MiniTest::Unit::TestCase
 
   def test_binomial_coefficient
+    assert_equal 0.0,   Babbage.binomial_coefficient(0, 5)
     assert_equal 1.0,   Babbage.binomial_coefficient(5, 0)
     assert_equal 5.0,   Babbage.binomial_coefficient(5, 1)
     assert_equal 10.0,  Babbage.binomial_coefficient(5, 2)
